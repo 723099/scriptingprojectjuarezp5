@@ -2,20 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WhileLoop: MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
-    int cupsInTheSink = 4;
-
-
+    public GameObject myObject;
     // Start is called before the first frame update
     void Start()
     {
-        while(cupsInTheSink > 0)
-        {
-            Debug.Log("I've washed a cup!");
-            cupsInTheSink--;
-        }
-        
+        Debug.Log("Active Self:" + myObject.activeSelf);
+        Debug.Log("Active in Hierarchy" + myObject.activeInHierarchy);
     }
 
     // Update is called once per frame
